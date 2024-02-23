@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Nutrinest</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            z-index: 10;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1, header nav ul li a {
+            color: #ffffff;
+            margin-right: 20px;
+            padding: 0.5rem 1rem;
+        }
+        .header-text {
+            color: #ffffff;
+        }
+        .card {
+            background-color: rgba(70, 78, 81, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2, .card p, .card a {
+            color: #ffffff;
+        }
+        .products-section {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            padding-top: 30px;
+			   min-height: 1500px;
+        }
+.about-us {
+    margin-top: 0;
+    padding-top: 20px; /* Adjust as needed */
+}
+        .about-us h2, .about-us p {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+        }
+        .home-section {
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-bottom: 0;
+        }
+.contact-section {
+    position: relative; /* This makes sure the pseudo-element is positioned relative to this section */
+}
+
+.contact-section::before {
+    content: ''; /* Necessary for a pseudo-element to appear */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value (0.5) to make it darker or lighter */
+    z-index: 1; /* Ensures the overlay is below the text content */
+}
+
+.container, .contact-details {
+    position: relative;
+    z-index: 2; /* This ensures the text appears above the dark overlay */
+}
+    </style>
+
+
+    <body>
+ <header>
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="logo.png" alt="NutriNest Logo" class="h-20 mr-7">
+            <nav class="flex-1">
+                <ul class="flex justify-end space-x-4">
+                    <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                    <!-- Update the href attribute here -->
+                    <li><a href="products.html" class="hover:text-gray-300">Products</a></li>
+                    <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+        <!-- Products Section with its own background -->
+    <section class="products-section bg-cover bg-fixed" style="background-image: url('bg.webp');">
+        <!-- Products content -->
+    <main class="container mx-auto mt-10">
+        <h2 class="text-4xl font-bold text-center mb-10 header-text">Explore Our Premium Supplements</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
+            <!-- Product: Protein -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="protein.webp" alt="Nutrinest Premium Whey Protein">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Premium Whey Protein</h2>
+                    <p class="text-gray-700 text-base">
+                        Advanced formula with 25g of protein and 5g BCAA to support muscle growth and recovery. Chocolate flavor.
+                    </p>
+                </div>
+            </div>
+            <!-- Product: Plant-Based Protein -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="plant-based.webp" alt="Plant-Based Protein">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Plant-Based Protein</h2>
+                    <p class="text-gray-700 text-base">
+                        Eco-friendly and sustainable protein source with all essential amino acids for muscle repair and growth.
+                    </p>
+                </div>
+            </div>
+            <!-- Product: Pre-Workout -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="preworkout(1).webp" alt="Pre-Workout">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Pre-Workout</h2>
+                    <p class="text-gray-700 text-base">
+                        Fuel your workout with our energizing blend of caffeine, beta-alanine, and creatine for peak performance.
+                    </p>
+                </div>
+            </div>
+            <!-- Product: Vitamins -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="vitamins.webp" alt="Vitamins">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Vitamins</h2>
+                    <p class="text-gray-700 text-base">
+                        Comprehensive blend of essential vitamins and minerals to support overall health and wellness.
+                    </p>
+                </div>
+            </div>
+            <!-- Product: Creatine -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="creatine.webp" alt="Creatine">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Creatine</h2>
+                    <p class="text-gray-700 text-base">
+                        Maximize your strength and endurance with our micronized creatine monohydrate for superior absorption.
+                    </p>
+                </div>
+            </div>
+<!-- Product: snack -->
+            <div class="card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img class="w-full" src="snack.webp" alt="Creatine">
+                <div class="px-6 py-4">
+                    <h2 class="font-bold text-xl mb-2">Snacks</h2>
+                    <p class="text-gray-700 text-base">
+                        Want a quick high-quality diet before/after your workout? Get our SNACKS!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    </section>
+
+    </body>
+</html>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Nutrinest</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            z-index: 10;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1, header nav ul li a {
+            color: #ffffff;
+            margin-right: 20px;
+            padding: 0.5rem 1rem;
+        }
+        .header-text {
+            color: #ffffff;
+        }
+        .card {
+            background-color: rgba(70, 78, 81, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2, .card p, .card a {
+            color: #ffffff;
+        }
+        .products-section {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            padding-top: 30px;
+			   min-height: 1500px;
+        }
+.about-us {
+    margin-top: 0;
+    padding-top: 20px; /* Adjust as needed */
+}
+        .about-us h2, .about-us p {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+        }
+        .home-section {
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-bottom: 0;
+        }
+.contact-section {
+    position: relative; /* This makes sure the pseudo-element is positioned relative to this section */
+}
+
+.contact-section::before {
+    content: ''; /* Necessary for a pseudo-element to appear */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value (0.5) to make it darker or lighter */
+    z-index: 1; /* Ensures the overlay is below the text content */
+}
+
+.container, .contact-details {
+    position: relative;
+    z-index: 2; /* This ensures the text appears above the dark overlay */
+}
+    </style>
+</head>
+
+
+<body class="font-sans pattern-bg">
+    <header>
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="logo.png" alt="NutriNest Logo" class="h-20 mr-7">
+            <nav class="flex-1">
+                <ul class="flex justify-end space-x-4">
+                    <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                    <!-- Update the href attribute here -->
+                    <li><a href="products.html" class="hover:text-gray-300">Products</a></li>
+                    <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home-section bg-cover bg-center min-h-screen flex items-center justify-center text-white" style="background-image: url('home.webp');">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-6">UNLEASH YOUR POTENTIAL WITH NUTRINEST</h1>
+            <p class="text-xl mb-8">Discover the secrets to enhanced performance and optimized health with our premium supplements.</p>
+            <!-- Shop Now Button -->
+           <a href="products.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out">
+    Shop Now
+</a>
+        </div>
+    </section>
+
+
+</body>
+</html>

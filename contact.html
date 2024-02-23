@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact-Us</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 10;
+    }
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header h1, header nav ul li a {
+        color: #ffffff;
+        margin-right: 20px;
+        padding: 0.5rem 1rem;
+    }
+    .header-text {
+        color: #ffffff;
+    }
+    .card {
+        background-color: rgba(70, 78, 81, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card h2, .card p, .card a {
+        color: #ffffff;
+    }
+    .about-us h2, .about-us p {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .container, .contact-details {
+        position: relative;
+        z-index: 2; /* This ensures the text appears above the dark overlay */
+    }
+    .contact-section::before {
+        content: ''; /* Necessary for a pseudo-element to appear */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the alpha value (0.5) to make it darker or lighter */
+        z-index: 1; /* Ensures the overlay is below the text content */
+    }
+    .contact-section {
+        display: flex;
+        min-height: 100vh; /* Full viewport height */
+        background-image: url('contact.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .text-section {
+        flex-basis: 75%;
+        padding: 2rem;
+        z-index: 2; /* Ensures text appears above the overlay */
+    }
+    .form-section {
+        flex-basis: 25%;
+        padding: 2rem;
+        margin-right: 2rem; /* Add right margin */
+        background-color: rgba(70, 78, 81, 0.8); /* Dark transparent background */
+        border-radius: 0.5rem;
+        z-index: 2; /* Ensures form appears above the overlay */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-section h2 {
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="container mx-auto flex justify-between items-center">
+        <img src="logo.png" alt="NutriNest Logo" class="h-20 mr-7">
+        <nav class="flex-1">
+            <ul class="flex justify-end space-x-4">
+               
+<li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="products.html" class="hover:text-gray-300">Products</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About Us</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="text-gray-900 bg-cover bg-fixed min-h-screen flex items-center justify-center" style="background-image: url('contact.webp');">
+     <!-- Text column -->
+            <div class="w-full lg:w-3/5 px-4 mb-8 lg:mb-0">
+                <h1 class="text-6xl font-bold mb-2 text-white">Let's chat.</h1>
+                <p class="mb-10 text-2xl text-white">We can help. Our team of experts is on hand to answer your questions👏</p>
+                <a href="mailto:nutrinest@contact.com" class="text-blue-300 hover:underline">
+                    <i class="fas fa-envelope"></i> Mail us at nutrinest@contact.com
+                </a>
+ <div class="social-links">
+            <a href="https://facebook.com" class="text-blue-300 hover:underline">
+                <i class="fab fa-facebook-f"></i> https://facebook.com/NutriNest
+</div>
+<div>
+            </a>
+            <a href="https://twitter.com" class="text-blue-300 hover:underline">
+                <i class="fab fa-twitter"></i> https://twitter.com/NutriNest
+            </a>
+        </div>
+</div>
+</div>
+
+
+
+ <div class="form-section">
+        <h2 class="text-2xl font-bold text-white">Message us🚀</h2>
+        <form id="contactForm" class="space-y-4">
+        <div>
+          <input type="text" id="fullName" name="fullName" required
+                 class="w-full p-2 border border-gray-300 rounded" placeholder="Full name*">
+        </div>
+        <div>
+          <input type="email" id="email" name="email" required
+                 class="w-full p-2 border border-gray-300 rounded" placeholder="Email address*">
+        </div>
+        <div>
+          <input type="text" id="subject" name="subject" required
+                 class="w-full p-2 border border-gray-300 rounded" placeholder="Subject">
+        </div>
+        <div>
+          <textarea id="message" name="message" required
+                    class="w-full p-2 border border-gray-300 rounded" placeholder="Send us messages for any info*"
+                    rows="4"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+          Send message
+        </button>
+      </form>
+ </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+    </body>
+</html>
